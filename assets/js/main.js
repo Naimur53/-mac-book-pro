@@ -42,9 +42,9 @@ function configurationButton(id) {
 function promoCode() {
     const code = promoCodeInput.value;
     if (code == "stevekaku") {
-        const grandTotalNum = parseInt(grandTotal.innerText);
-        let discount = grandTotalNum * 0.2;
-        let finalPrice = grandTotalNum - discount;
+        const totalPriceNum = parseInt(totalPrice.innerText);
+        let discount = totalPriceNum * 0.2;
+        let finalPrice = totalPriceNum - discount;
         //update grand total
         updateGrandTotal(finalPrice);
         // input value to nothing 
