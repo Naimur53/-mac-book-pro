@@ -30,35 +30,35 @@
             <div class="mb-10">
                 <!-- memory button  -->
                 <h3 class="text-2xl font-semibold mb-4">Memory</h3>
-                <button id="memory-8gb"
+                <button onclick="updateButton('memory-8gb')" id="memory-8gb"
                     class="text-lg border py-1 px-2 border-gray-400 rounded transition-colors duration-300 hover:bg-gray-100">8GB
                     Unified
                     memory</button>
-                <button id="memory-16gb"
+                <button onclick="updateButton('memory-16gb')" id="memory-16gb"
                     class="text-lg border py-1 px-2 border-gray-400 rounded transition-colors duration-300 hover:bg-gray-100">16GB
                     Unified memory</button>
             </div>
             <!-- storage  -->
             <div class="mb-10">
                 <h3 class="text-2xl font-semibold mb-4">Storage</h3>
-                <button
+                <button onclick="updateButton('storage-256gb')"
                     class="text-lg border py-1 px-2 border-gray-400 rounded transition-colors duration-300 hover:bg-gray-100">256GB
                     SSD storage</button>
-                <button
+                <button onclick="updateButton('storage-512gb')"
                     class="text-lg border py-1 px-2 border-gray-400 rounded transition-colors duration-300 hover:bg-gray-100">512GB
                     SSD storage</button>
-                <button
+                <button onclick="updateButton('storage-1tb')"
                     class="text-lg border py-1 px-2 border-gray-400 rounded transition-colors duration-300 hover:bg-gray-100">1TB
                     SSD storage</button>
             </div>
             <!-- delivery  -->
             <div class="mb-10">
                 <h3 class="text-2xl font-semibold mb-4">Chose Your delivery option</h3>
-                <button
+                <button onclick="updateButton('delivery-free')"
                     class="text-lg border py-1 px-2 border-gray-400 rounded transition-colors duration-300 hover:bg-gray-100">Friday,Aug
                     25 FREE Prime
                     Delivery</button>
-                <button
+                <button onclick="updateButton('delivery-20$')"
                     class="text-lg border py-1 px-2 border-gray-400 rounded transition-colors duration-300 hover:bg-gray-100">Friday,Aug
                     21 Delivery charge
                     $20</button>
@@ -68,7 +68,7 @@
                 <!-- best price  -->
                 <div class="flex justify-between border-b-2 py-3 pr-5">
                     <h3 class="text-2xl font-semibold inline-block">Best Price</h3>
-                    <h3 class="text-2xl font-semibold inline-block">$<span>1299</span></h3>
+                    <h3 class="text-2xl font-semibold inline-block">$<span id="best-price">1299</span></h3>
                 </div>
                 <!-- Extra memory  -->
                 <div class="flex justify-between border-b-2 py-3 pr-5">
@@ -78,23 +78,23 @@
                 <!-- Extra storage  -->
                 <div class="flex justify-between border-b-2 py-3 pr-5">
                     <h3 class="text-2xl font-semibold inline-block">Extra storage Cost</h3>
-                    <h3 class="text-2xl font-semibold inline-block">$<span>0</span></h3>
+                    <h3 class="text-2xl font-semibold inline-block">$<span id="extra-storage">0</span></h3>
                 </div>
                 <!-- delivery charge -->
                 <div class="flex justify-between border-b-4 border-gray-200 py-3 pr-5">
                     <h3 class="text-2xl font-semibold inline-block">Delivery charge</h3>
-                    <h3 class="text-2xl font-semibold inline-block">$<span>0</span></h3>
+                    <h3 class="text-2xl font-semibold inline-block">$<span id="delivery-charge">0</span></h3>
                 </div>
                 <!-- total price header  -->
                 <div class="flex justify-between border-b-2 py-3 pr-5">
                     <h3 class="text-2xl font-semibold inline-block">Total Price</h3>
-                    <h3 class="text-2xl font-semibold inline-block">$<span>1299</span></h3>
+                    <h3 class="text-2xl font-semibold inline-block">$<span id="total-price">1299</span></h3>
                 </div>
                 <!-- promo code  -->
                 <div class="mt-4">
                     <h4 class="text-xl">Add Pomo code</h4>
-                    <input class="border w-3/4 mt-5 p-2 rounded" type="text">
-                    <button
+                    <input id="promo-code-input" class="border w-3/4 mt-5 p-2 rounded" type="text">
+                    <button onclick="promoCode()"
                         class="bg-red-500 text-white px-2 py-3 rounded transition-colors duration-300 hover:bg-red-700">Apply</button>
                 </div>
 
@@ -104,7 +104,7 @@
     <!-- main total section  -->
     <section class="container mx-auto px-8">
         <div class="flex justify-center items-center mt-5 p-3 border-t-2">
-            <h1 class="text-3xl font-semibold">Total:$<span>1299</span></h1>
+            <h1 class="text-3xl font-semibold">Total:$<span id="grand-total">1299</span></h1>
         </div>
     </section>
 
