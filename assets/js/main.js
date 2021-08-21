@@ -6,7 +6,7 @@ const totalPrice = document.getElementById("total-price");
 const promoCodeInput = document.getElementById("promo-code-input");
 const grandTotal = document.getElementById('grand-total');
 //handel  button 
-function updateButton(id) {
+function configurationButton(id) {
     switch (id) {
         //memory update 
         case "memory-8gb":
@@ -15,7 +15,6 @@ function updateButton(id) {
         case "memory-16gb":
             extraMemory.innerText = 180;
             break;
-
         //storage update
         case "storage-256gb":
             extraStorage.innerText = 0;
@@ -26,7 +25,6 @@ function updateButton(id) {
         case "storage-1tb":
             extraStorage.innerText = 180;
             break;
-
         //delivery update
         case "delivery-free":
             deliveryCharge.innerText = 0;
@@ -46,7 +44,9 @@ function promoCode() {
     if (code == "stevekaku") {
         const grandTotalNum = parseInt(grandTotal.innerText);
         let discount = grandTotalNum * 0.2;
-        grandTotal.innerText = grandTotalNum - discount;
+        let finalPrice = grandTotalNum - discount;
+        //update grand total
+        updateGrandTotal(finalPrice);
         // input value to nothing 
         promoCodeInput.value = '';
     }
@@ -54,6 +54,7 @@ function promoCode() {
         alert("Wrong promo code insert")
     }
 }
+// update total price function 
 function updateTotalPrice() {
     // converting String to num 
     const bestPriceNum = parseInt(bestPrice.innerText);
@@ -64,5 +65,9 @@ function updateTotalPrice() {
     const newTotalPrice = bestPriceNum + extraMemoryNum + extraStorageNum + deliveryChargeNum;
     totalPrice.innerText = newTotalPrice;
     //update grand total
-    grandTotal.innerText = newTotalPrice;
+    updateGrandTotal(newTotalPrice);
+}
+// grand total function 
+function updateGrandTotal(value) {
+    grandTotal.innerText = value;
 }

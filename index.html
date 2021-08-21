@@ -8,8 +8,6 @@
     <title>Project</title>
     <!-- tailwind css -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <!-- main css  -->
-    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -30,35 +28,35 @@
             <div class="mb-10">
                 <!-- memory button  -->
                 <h3 class="text-2xl font-semibold mb-4">Memory</h3>
-                <button onclick="updateButton('memory-8gb')" id="memory-8gb"
+                <button onclick="configurationButton('memory-8gb')" id="memory-8gb"
                     class="text-lg border py-1 px-2 border-gray-400 rounded transition-colors duration-300 hover:bg-gray-100">8GB
                     Unified
                     memory</button>
-                <button onclick="updateButton('memory-16gb')" id="memory-16gb"
+                <button onclick="configurationButton('memory-16gb')" id="memory-16gb"
                     class="text-lg border py-1 px-2 border-gray-400 rounded transition-colors duration-300 hover:bg-gray-100">16GB
                     Unified memory</button>
             </div>
             <!-- storage  -->
             <div class="mb-10">
                 <h3 class="text-2xl font-semibold mb-4">Storage</h3>
-                <button onclick="updateButton('storage-256gb')"
+                <button onclick="configurationButton('storage-256gb')"
                     class="text-lg border py-1 px-2 border-gray-400 rounded transition-colors duration-300 hover:bg-gray-100">256GB
                     SSD storage</button>
-                <button onclick="updateButton('storage-512gb')"
+                <button onclick="configurationButton('storage-512gb')"
                     class="text-lg border py-1 px-2 border-gray-400 rounded transition-colors duration-300 hover:bg-gray-100">512GB
                     SSD storage</button>
-                <button onclick="updateButton('storage-1tb')"
+                <button onclick="configurationButton('storage-1tb')"
                     class="text-lg border py-1 px-2 border-gray-400 rounded transition-colors duration-300 hover:bg-gray-100">1TB
                     SSD storage</button>
             </div>
             <!-- delivery  -->
             <div class="mb-10">
                 <h3 class="text-2xl font-semibold mb-4">Chose Your delivery option</h3>
-                <button onclick="updateButton('delivery-free')"
+                <button onclick="configurationButton('delivery-free')"
                     class="text-lg border py-1 px-2 border-gray-400 rounded transition-colors duration-300 hover:bg-gray-100">Friday,Aug
                     25 FREE Prime
                     Delivery</button>
-                <button onclick="updateButton('delivery-20$')"
+                <button onclick="configurationButton('delivery-20$')"
                     class="text-lg border py-1 px-2 border-gray-400 rounded transition-colors duration-300 hover:bg-gray-100">Friday,Aug
                     21 Delivery charge
                     $20</button>
@@ -101,16 +99,12 @@
             </div>
         </div>
     </header>
-    <!-- main total section  -->
-    <section class="container mx-auto px-8">
+    <!-- grand total section  -->
+    <footer class="container mx-auto px-8">
         <div class="flex justify-center items-center mt-5 p-3 border-t-2">
             <h1 class="text-3xl font-semibold">Total:$<span id="grand-total">1299</span></h1>
         </div>
-    </section>
-
-
-
-
+    </footer>
 
     <!-- main js  -->
     <script src="assets/js/main.js"></script>
